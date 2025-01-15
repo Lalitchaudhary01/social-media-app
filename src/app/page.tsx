@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import {
   SignInButton,
   SignedIn,
@@ -9,12 +10,13 @@ export default function Home() {
     <div>
       <SignedOut>
             <SignInButton mode="modal">
-              <button className='bg-red-500'> Sign in</button>
+            <Button>Sign IN</Button>
               </SignInButton>
           </SignedOut>
           <SignedIn>
             <UserButton />
           </SignedIn>
-    </div>
+          <Button variant={"secondary"}>Click me</Button>
+              </div>
   );
 }
