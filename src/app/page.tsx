@@ -1,6 +1,20 @@
-
+import {
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs'
 export default function Home() {
   return (
-    <div>Home page</div>
+    <div>
+      <SignedOut>
+            <SignInButton mode="modal">
+              <button className='bg-red-500'> Sign in</button>
+              </SignInButton>
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+    </div>
   );
 }
