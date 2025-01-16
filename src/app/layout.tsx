@@ -28,38 +28,30 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-         <ThemeProvider
+      <html lang="en">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <ThemeProvider
             attribute="class"
             defaultTheme="system"
             enableSystem
             disableTransitionOnChange
           >
             <div>
-              <Navbar/>
+              <Navbar />
               <main>
                 <div className="max-w-7xl mx-auto px-4">
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-                    <div className="Hidden lg:col-span-3">
-                      Sidebar
-
-                    </div>
-
+                    <div className="Hidden lg:col-span-3">Sidebar</div>
+                    <div className="lg:col-span-9">{children}</div>
                   </div>
-
                 </div>
-                  {children}
               </main>
-             
             </div>
-            
           </ThemeProvider>
-       
-      </body>
-    </html>
+        </body>
+      </html>
     </ClerkProvider>
   );
 }
